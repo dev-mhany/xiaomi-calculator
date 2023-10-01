@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 18px;
+}
+
+.calculator {
+    background: linear-gradient(135deg, #a9a9a9, #808080);
+    width: 280px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    background-color: #1c1c1e;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    background: none;
+    width: 100%;
+    border: none;
+    color: white;
+    font-size: 24px;
+    text-align: right;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#del, #ac, button:contains('+'), button:contains('-'), button:contains('*'), button:contains('/'), button:contains('=') {
+    background-color: #fd9426;
+    color: #fff;
+}
+
+button:not(#del):not(#ac):not(:contains('+')):not(:contains('-')):not(:contains('*')):not(:contains('/')):not(:contains('=')) {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+button:contains('.') {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+#del, #ac {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+button[data-operation], button:contains('=') {
+    background-color: #fd9426;
+    color: #fff;
+}
+
+button:not([data-operation]):not(#del):not(#ac):not(:contains('=')) {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+
