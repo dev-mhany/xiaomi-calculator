@@ -45,25 +45,15 @@ button {
     border: none;
     font-size: 18px;
     transition: background-color 0.3s;
+    width: 55px;   /* Fixed width */
+    height: 55px;  /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:active {
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-#del, #ac, button:contains('+'), button:contains('-'), button:contains('*'), button:contains('/'), button:contains('=') {
-    background-color: #fd9426;
-    color: #fff;
-}
-
-button:not(#del):not(#ac):not(:contains('+')):not(:contains('-')):not(:contains('*')):not(:contains('/')):not(:contains('=')) {
-    background-color: #f5f5f7;
-    color: #333;
-}
-
-button:contains('.') {
-    background-color: #f5f5f7;
-    color: #333;
 }
 
 #del, #ac {
@@ -80,5 +70,3 @@ button:not([data-operation]):not(#del):not(#ac):not(:contains('=')) {
     background-color: #f5f5f7;
     color: #333;
 }
-
-
